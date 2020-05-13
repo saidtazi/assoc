@@ -14,6 +14,13 @@ def get_data():
 					"description": _("Documents assigned to you and by you."),
 					"onboard": 1,
 				},
+				{
+					"type": "doctype",
+					"name": "Demandeur Aide",
+					"label": _("Demandeurs d'aide"),
+					"description": _("Documents assigned to you and by you."),
+					"onboard": 1,
+				},
 			]
 		}
 	]

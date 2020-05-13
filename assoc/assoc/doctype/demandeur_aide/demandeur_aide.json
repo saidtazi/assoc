@@ -1,0 +1,218 @@
+{
+ "autoname": "format:{YYYY}{MM}{######}",
+ "creation": "2020-05-13 07:33:13.859664",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "photo",
+  "nom",
+  "prenom",
+  "column_break_5",
+  "date_naissance",
+  "lieu_naissance",
+  "section_break_7",
+  "adresse",
+  "column_break_9",
+  "ville",
+  "wilaya",
+  "tel",
+  "section_break_8",
+  "pin",
+  "column_break_15",
+  "date_pin",
+  "column_break_16",
+  "pin_joint",
+  "section_break_11",
+  "status",
+  "column_break_21",
+  "etat_famillial",
+  "info_unique",
+  "famille_section",
+  "nom_conj",
+  "prenom_conj",
+  "date_lieu_conj"
+ ],
+ "fields": [
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Photo"
+  },
+  {
+   "fieldname": "nom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_naissance",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date de naissance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adresse",
+   "fieldtype": "Small Text",
+   "label": "Adresse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prenom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pr\u00e9nom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lieu_naissance",
+   "fieldtype": "Data",
+   "label": "Lieu de naissance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "pin",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00b0 P.I.N",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "date_pin",
+   "fieldtype": "Date",
+   "label": "Date delivrance",
+   "reqd": 1
+  },
+  {
+   "fieldname": "info_unique",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "info unique",
+   "unique": 1
+  },
+  {
+   "default": "Actif",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Actif\nNon actif\nD\u00e9c\u00e9d\u00e9",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "famille_section",
+   "fieldtype": "Section Break",
+   "label": "Famille"
+  },
+  {
+   "default": "C\u00e9libataire",
+   "fieldname": "etat_famillial",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Etat familiale",
+   "options": "C\u00e9libataire\nMari\u00e9(e)\nDivorc\u00e9(e)\nVeuve",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nom_conj",
+   "fieldtype": "Data",
+   "label": "Nom conjoint"
+  },
+  {
+   "fieldname": "prenom_conj",
+   "fieldtype": "Data",
+   "label": "Pr\u00e9nom conjoint"
+  },
+  {
+   "fieldname": "date_lieu_conj",
+   "fieldtype": "Data",
+   "label": "Date et lieu de naissance conj"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tel",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "T\u00e9l/Mob",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wilaya",
+   "fieldtype": "Select",
+   "label": "Wilaya",
+   "options": "\n01 - Adrar\n02 - Chlef\n03 - Laghouat\n04 - Oum El Bouaghi\n05 - Batna\n06 - B\u00e9ja\u00efa\n07 - Biskra\n08 - B\u00e9char\n09 - Blida\n10 - Bouira\n11 - Tamanrasset\n12 - T\u00e9bessa\n13 - Tlemcen\n14 - Tiaret\n15 - Tizi Ouzou\n16 - Alger\n17 - Djelfa\n18 - Jijel\n19 - S\u00e9tif\n20 - Sa\u00efda\n21 - Skikda\n22 - Sidi Bel Abb\u00e8s\n23 - Annaba\n24 - Guelma\n25 - Constantine\n26 - M\u00e9d\u00e9a\n27 - Mostaganem\n28 - M'Sila\n29 - Mascara\n30 - Ouargla\n31 - Oran\n32 - El Bayadh\n33 - Illizi\n34 - Bordj Bou Arreridj\n35 - Boumerd\u00e8s\n36 - El Tarf\n37 - Tindouf\n38 - Tissemsilt\n39 - El Oued\n40 - Khenchela\n41 - Souk Ahras\n42 - Tipaza\n43 - Mila\n44 - A\u00efn Defla\n45 - Na\u00e2ma\n46 - A\u00efn T\u00e9mouchent\n47 - Gharda\u00efa\n48 - Relizane",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "ville",
+   "fieldtype": "Data",
+   "label": "Ville",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pin_joint",
+   "fieldtype": "Attach",
+   "label": "En pi\u00e8ce jointe"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "image_field": "photo",
+ "modified": "2020-05-13 08:13:11.326311",
+ "modified_by": "Administrator",
+ "module": "Assoc",
+ "name": "Demandeur Aide",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nom",
+ "track_changes": 1
+}
