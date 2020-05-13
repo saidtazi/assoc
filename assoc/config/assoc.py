@@ -9,8 +9,8 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Test",
-					"label": _("Test"),
+					"name": "Association",
+					"label": _("Association"),
 					"description": _("Documents assigned to you and by you."),
 					"onboard": 1,
 				},

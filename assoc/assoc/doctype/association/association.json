@@ -17,7 +17,7 @@
    "unique": 1
   }
  ],
- "modified": "2020-05-13 06:22:13.063295",
+ "modified": "2020-05-13 06:35:48.660353",
  "modified_by": "Administrator",
  "module": "Assoc",
  "name": "Association",
@@ -32,6 +32,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Associations Manager",
    "share": 1,
    "write": 1
   }
