@@ -1,0 +1,104 @@
+{
+ "autoname": "format:{assoc}-{YYYY}-{#####}",
+ "creation": "2020-05-14 17:47:01.400537",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_activite",
+  "start_date",
+  "benevol",
+  "column_break_4",
+  "assoc",
+  "end_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "name_activite",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom activit\u00e9",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assoc",
+   "fieldtype": "Link",
+   "label": "Association",
+   "options": "Association",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date d\u00e9but",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date fin",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "benevol",
+   "fieldtype": "Check",
+   "in_standard_filter": 1,
+   "label": "Travail b\u00e9n\u00e9vole",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "En cours",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Etat",
+   "options": "En cours\nTermin\u00e9",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-05-15 18:18:10.662254",
+ "modified_by": "Administrator",
+ "module": "Assoc",
+ "name": "Activites",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Associations Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name_activite",
+ "track_changes": 1
+}

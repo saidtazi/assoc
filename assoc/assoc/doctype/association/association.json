@@ -2,22 +2,109 @@
  "autoname": "field:name_assoc",
  "creation": "2020-05-12 07:53:08.423477",
  "doctype": "DocType",
+ "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name_assoc"
+  "name_assoc",
+  "manager_assoc",
+  "full_name",
+  "column_break_4",
+  "date_assoc",
+  "num_agreement",
+  "section_break_7",
+  "adresse_assoc",
+  "activite_assoc",
+  "column_break_10",
+  "objectifs_assoc",
+  "zone_assoc",
+  "status"
  ],
  "fields": [
   {
    "fieldname": "name_assoc",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Nom",
+   "label": "Nom Association",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "date_assoc",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date cr\u00e9ation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "num_agreement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "N\u00b0 Agr\u00e9ment",
+   "search_index": 1
+  },
+  {
+   "fieldname": "activite_assoc",
+   "fieldtype": "Select",
+   "label": "Activit\u00e9",
+   "options": "\nReligieux\nSocial\nCulturel\nB\u00e9n\u00e9vol\nHumain",
+   "reqd": 1
+  },
+  {
+   "fieldname": "adresse_assoc",
+   "fieldtype": "Small Text",
+   "label": "Adresse"
+  },
+  {
+   "fieldname": "objectifs_assoc",
+   "fieldtype": "Small Text",
+   "label": "Objectifs"
+  },
+  {
+   "fieldname": "zone_assoc",
+   "fieldtype": "Select",
+   "label": "Zone",
+   "options": "\nWilaya\nR\u00e9gionale\nNationale\nAutre"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Etat",
+   "options": "Active\nSuspendu",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manager_assoc",
+   "fieldtype": "Link",
+   "label": "G\u00e9rant",
+   "options": "User",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fetch_from": "manager_assoc.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nom g\u00e9rant",
+   "read_only": 1
   }
  ],
- "modified": "2020-05-13 06:35:48.660353",
+ "hide_toolbar": 1,
+ "modified": "2020-05-15 16:27:18.695875",
  "modified_by": "Administrator",
  "module": "Assoc",
  "name": "Association",
@@ -36,19 +123,10 @@
    "write": 1
   },
   {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
    "read": 1,
-   "report": 1,
-   "role": "Associations Manager",
-   "share": 1,
-   "write": 1
+   "role": "Associations Manager"
   }
  ],
- "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "track_changes": 1

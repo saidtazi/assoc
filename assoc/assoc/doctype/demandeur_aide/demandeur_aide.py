@@ -7,4 +7,6 @@ from __future__ import unicode_literals
 from frappe.model.document import Document
 
 class DemandeurAide(Document):
-	pass
+	def before_save(self):
+		self.demandeur_name = self.nom + ' ' + self.prenom
+		self.conjoint_name = self.nom_conj + ' ' + self.prenom_conj

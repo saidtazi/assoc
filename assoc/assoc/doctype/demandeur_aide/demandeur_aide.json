@@ -2,15 +2,18 @@
  "autoname": "format:{YYYY}{MM}{######}",
  "creation": "2020-05-13 07:33:13.859664",
  "doctype": "DocType",
+ "document_type": "Setup",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "photo",
   "nom",
   "prenom",
+  "demandeur_name",
   "column_break_5",
   "date_naissance",
   "lieu_naissance",
+  "status",
   "section_break_7",
   "adresse",
   "column_break_9",
@@ -24,35 +27,33 @@
   "column_break_16",
   "pin_joint",
   "section_break_11",
-  "status",
   "column_break_21",
-  "etat_famillial",
-  "info_unique",
   "famille_section",
-  "nom_conj",
-  "prenom_conj",
-  "date_lieu_conj"
+  "etat_famillial",
+  "nb_enf"
  ],
  "fields": [
   {
    "fieldname": "photo",
    "fieldtype": "Attach Image",
    "hidden": 1,
-   "label": "Photo"
+   "label": "Photo",
+   "report_hide": 1
   },
   {
    "fieldname": "nom",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Nom",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "date_naissance",
    "fieldtype": "Date",
    "in_list_view": 1,
    "label": "Date de naissance",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "adresse",
@@ -67,7 +68,6 @@
   {
    "fieldname": "prenom",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Pr\u00e9nom",
    "reqd": 1
   },
@@ -84,7 +84,9 @@
   {
    "fieldname": "pin",
    "fieldtype": "Data",
+   "in_global_search": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "N\u00b0 P.I.N",
    "reqd": 1,
    "unique": 1
@@ -94,13 +96,6 @@
    "fieldtype": "Date",
    "label": "Date delivrance",
    "reqd": 1
-  },
-  {
-   "fieldname": "info_unique",
-   "fieldtype": "Data",
-   "hidden": 1,
-   "label": "info unique",
-   "unique": 1
   },
   {
    "default": "Actif",
@@ -126,23 +121,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Etat familiale",
-   "options": "C\u00e9libataire\nMari\u00e9(e)\nDivorc\u00e9(e)\nVeuve",
+   "options": "C\u00e9libataire\nMari\u00e9(e)\nDivorc\u00e9(e)\nVeuf(ve)",
    "reqd": 1
-  },
-  {
-   "fieldname": "nom_conj",
-   "fieldtype": "Data",
-   "label": "Nom conjoint"
-  },
-  {
-   "fieldname": "prenom_conj",
-   "fieldtype": "Data",
-   "label": "Pr\u00e9nom conjoint"
-  },
-  {
-   "fieldname": "date_lieu_conj",
-   "fieldtype": "Data",
-   "label": "Date et lieu de naissance conj"
   },
   {
    "fieldname": "section_break_7",
@@ -189,10 +169,24 @@
   {
    "fieldname": "column_break_21",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "demandeur_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Demandeur",
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "nb_enf",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Nembre Enfants"
   }
  ],
  "image_field": "photo",
- "modified": "2020-05-13 08:13:11.326311",
+ "modified": "2020-05-15 18:51:17.321426",
  "modified_by": "Administrator",
  "module": "Assoc",
  "name": "Demandeur Aide",
@@ -209,10 +203,20 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1
   }
  ],
+ "search_fields": "demandeur_name,pin",
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "nom",
+ "title_field": "demandeur_name",
  "track_changes": 1
 }
